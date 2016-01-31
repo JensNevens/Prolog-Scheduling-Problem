@@ -40,6 +40,7 @@ To test your scheduler, problem instances are provided. Each defines a set of co
 - The correction time required for each exam: **sc_correction_time(EID,Days)**: 'Days' days are required to correct the exam with 'EID'. (Note: The day of the exam excluded)
  
 - The study time required for each exam: **sc_study_time(EID,Days)**: 'Days' days are required to study for the exam with 'EID'. (Note: The day of the exam excluded) The following table gives an overview of the instances provided:
+
 | # | name | students | lecturers | courses | rooms | exam period length | optimal sq |
 |---|------|----------|-----------|---------|-------|--------------------|------------|
 | 1 | small       | 4   | 4  | 5  | 2 | 5 Days  | 1.875 |
@@ -65,12 +66,14 @@ Soft constraints, unlike hard constraints, are not required for the schedule to 
 - **sc_same_day(PID,Penalty)**: A penalty of 'Penalty' is imposed for each pair of exams the person with 'PID' has on the same day. E.g. if the person has 3 exams on one day, 'Penalty' is imposed 3 times.
 - **sc_b2b(PID,Penalty)**: A penalty of 'Penalty' is imposed for each pair of exams the person with 'PID' has back-to-back (same day and consecutively). E.g. if the person has 3 exams consecutively, 'Penalty' is imposed 2 times.
 - **sc_correction_penalty(LID,Penalty)**: A penalty of 'Penalty' is imposed for each day the lecturer with 'LID' has too little to correct all his exams. Note that a lecturer can correct exams, the same day he has another exam (just not the exam itself). E.g. assume a lecturer has 2 exams in a 1-5 day exam period, each requiring 2 days to correct. If exams are held day X and Y, Z times 'Penalty' is imposed.
+
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | X | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 4 | 4 | 5 |
 | Y | 1 | 2 | 3 | 4 | 5 | 2 | 3 | 4 | 5 | 3 | 4 | 5 | 4 | 5 | 5 |
 | Z | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 4 |
 - **sc_study_penalty(SID,Penalty)**: A penalty of 'Penalty' is imposed for each day the student with 'SID' has too little to study for all his exams. Note that a student can study for exams, the same day he has another exam (just for the exam itself). E.g. assume a student has 2 exams in a 1-5 day exam period, each requiring 2 days to study for. If exams are held day X and Y, Z times 'Penalty' is imposed.
+
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | X|	1|	1|	1|	1|	1|	2|	2|	2|	2|	3|	3|	3|	4|	4|	5|
