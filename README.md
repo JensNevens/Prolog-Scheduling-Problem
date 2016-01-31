@@ -45,7 +45,7 @@ To test your scheduler, problem instances are provided. Each defines a set of co
 |---|------|----------|-----------|---------|-------|--------------------|------------|
 | 1 | small       | 4   | 4  | 5  | 2 | 5 Days  | 1.875 |
 | 2 | large_short | 100 | 19 | 34 | 3 | 9 Days  | ???   |
-| 3	| large_long  | 100 | 19 | 34 | 3 | 23 Days | ???   |
+| 3	| large_long  | 100 | 19 | 34 | 3 | 23 Days | 0   |
  
 ## Hard Constraints
 The following constraints must be met in order for a schedule to be admissable:
