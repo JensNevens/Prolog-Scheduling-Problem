@@ -2,7 +2,22 @@
 
 ## Note
 
-This project is part of the course Declarative Programming taught at Vrije Universiteit Brussel
+This project is part of the course Declarative Programming taught at Vrije Universiteit Brussel. It can be executed by running the _swipl_ program in the directory of this project. SWI-Prolog is available [here](http://www.swi-prolog.org/). First, one of the instances should be loaded. This can be done by one of the following commands:
+
+- `load_module(small_instance).`
+- `load_module(large_long_instance).`
+- `load_module(large_short_instance).`
+
+Next, the program files can be loaded in the same way (i.e. using `load_module`) and the available predicates can be executed. These are summarized below:
+
+| File | Predicates |
+|------|------------|
+| *valid.pl* | __is_valid(?Schedule)__ |
+| *cost.pl*  | __cost(+Schedule, ?Cost), violates_sc(+Schedule, -Constraints)__ |
+| *print.pl* | __pretty_print(+Schedule), pretty_print(+PID, +Schedule)__ |
+| *find_optimal.pl* | __find_optimal(-Schedule), is_optimal(?Schedule)__ |
+| *find_heuristic_astar.pl* | __find_heuristically(-Schedule)__ |
+| *find_heuristic.pl* | __find_heuristically(-Schedule), find_heuristically(-Schedule, +Time)__ |
 
 ## The Exam Timetabling Problem
 
